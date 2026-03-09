@@ -1,4 +1,4 @@
-# 📝 Todo List Web App
+# 📝 Simple Todo List Web App
 
 A modern, responsive **Todo List application** built using **HTML, CSS, and Vanilla JavaScript**.  
 It helps users manage daily tasks efficiently with features like task filtering, local storage persistence, and a beautiful **dark/light theme toggle**.
