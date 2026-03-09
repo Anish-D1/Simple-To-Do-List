@@ -1,4 +1,4 @@
-# 📝 Simple Todo List Web App
+# 📝 Simple To-do List Web App
 
 A modern, responsive **Todo List application** built using **HTML, CSS, and Vanilla JavaScript**.  
 It helps users manage daily tasks efficiently with features like task filtering, local storage persistence, and a beautiful **dark/light theme toggle**.
@@ -55,7 +55,7 @@ It helps users manage daily tasks efficiently with features like task filtering,
    git clone https://github.com/Anish-D1/your-repo-name.git
    ```
 2. Open the folder  
-3. Run `TodoList.html` in your browser  
+3. Run `index.html` in your browser  
 
 ---
 
