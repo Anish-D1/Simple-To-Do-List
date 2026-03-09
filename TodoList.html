@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="TodoList.css">
+    <link rel="icon" href="./res/favicon.png" type="image/x-icon">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    
+
+<script type="text/javascript">
+jQuery.noConflict();
+jQuery(document).ready(function($) {
+    $('.name').keyup(function(event) {
+        var textBox = event.target;
+        var start = textBox.selectionStart;
+        var end = textBox.selectionEnd;
+        textBox.value = textBox.value.charAt(0).toUpperCase() + textBox.value.slice(1).toLowerCase();
+        textBox.setSelectionRange(start, end);
+    });
+});
+</script>
+
+</head>
+
+<body>
+    </head>
+
+    <body>
+        <div class="container">
+             
+            <header>
+                <h1><i class="fas fa-tasks"></i> To-Do List</h1>
+                
+
+                <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-checkbox">
+                <label for="theme-switch" class="theme-label"></label>
+                </div>
+          
+            </header>
+
+            
+        
+
+            <div class="app-container">
+
+                <div class="input-section">
+                    <div class="input-group">
+                        <input type="text" id="todo-input" placeholder="Add a new task..." style="text-transform: capitalize">
+                        <button id="add-btn">Add Task</button>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Tasks</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+
+                <div class="todos-section">
+                    <div class="section-title">Your Tasks</div>
+            
+                    <div class="todos-container" id="todos-container">
+                        <div class="empty-state" id="empty-state">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h3>No tasks yet</h3>
+                            <p>Add a task using the input field above</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="total-tasks">Total: <span id="total-count">0</span> tasks</div>
+                    <div class="pending-tasks">Pending: <span id="pending-count">0</span> tasks</div>
+                    <div class="completed-tasks">Completed: <span id="completed-count">0</span> tasks</div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>How to use this Todo List:</h3>
+                <ul>
+                    <li><span class="highlight">Add a task</span>: Type your task in the input field and click "Add
+                        Task" or
+                        press Enter</li>
+                    <li><span class="highlight">Mark as complete</span>: Click the checkbox next to a task to mark it as
+                        completed</li>
+                    <li><span class="highlight">Edit a task</span>: Click the edit button (pencil icon) to modify a task
+                    </li>
+                    <li><span class="highlight">Delete a task</span>: Click the delete button (trash icon) to remove a
+                        task
+                    </li>
+                    <li><span class="highlight">Filter tasks</span>: Use the filter buttons to view all, pending, or
+                        completed tasks</li>
+                </ul>
+                <p><strong>Note:</strong> Your tasks are saved in your browser's local storage, so they'll be here when
+                    you
+                    come back!</p>
+            </div>
+
+
+            
+       
+        </div>
+
+        <footer>
+            <p class="author-text"> <a    href="https://github.com/Anish-D1">2026 | Anish-D1  </a></p>
+        </footer>
+
+
+        <!-- Custom Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+
+    <h3 id="modal-title">Delete Task</h3>
+
+    <p id="modal-message">
+      Are you sure you want to delete this task?
+    </p>
+
+    <input type="text" id="edit-input" style="display:none;" />
+
+    <div class="modal-buttons">
+      <button id="cancel-btn">Cancel</button>
+      <button id="confirm-btn">Delete</button>
+    </div>
+
+  </div>
+</div>
+        <script src="TodoList.js"></script>
+    </body>
+
+</html>
